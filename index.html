@@ -1,0 +1,135 @@
+
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Quality Megamart — Offline Site</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <header class="sticky">
+    <div class="container row" style="padding:12px 0">
+      <a href="#home" class="logo">
+        <img src="assets/logo.svg" alt="Quality Megamart logo" width="36" height="36"/>
+        <span>Quality Megamart</span>
+      </a>
+      <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#items">Items</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <button id="open-cart" class="btn icon" title="Open cart">🛒<span id="cart-count" class="badge">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Aapke Shehar ka <span style="background:linear-gradient(90deg,#4f46e5,#7c3aed);-webkit-background-clip:text;background-clip:text;color:transparent">Megamart</span></h1>
+        <p class="lead">Roz ki zaroorat se lekar fashion & accessories tak — sab kuch ek hi jagah, sahi daam par. Fast delivery aur fresh stock guaranteed.</p>
+        <div style="margin-top:16px">
+          <a href="#items" class="btn primary">Abhi Shopping Shuru karein →</a>
+        </div>
+        <div style="margin-top:12px;color:#64748b"><small>Fresh Stock • Best Value • Local Support</small></div>
+      </div>
+    </section>
+
+    <section id="items" class="section">
+      <div class="container">
+        <div class="row">
+          <div>
+            <h2>Items</h2>
+            <p class="lead" style="margin:0">Photo • Price • Add to Cart</p>
+          </div>
+          <div class="right">
+            <div class="search">
+              <span class="icon">🔎</span>
+              <input id="search" type="text" placeholder="Search items..."/>
+            </div>
+            <select id="category">
+              <option>All</option>
+              <option>Fashion</option>
+              <option>Accessories</option>
+            </select>
+          </div>
+        </div>
+        <div id="products-grid" class="grid products" style="margin-top:20px"></div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Services</h2>
+        <ul class="clean">
+          <li>✔️ Free Local Delivery (minimum order par)</li>
+          <li>✔️ Bulk/Wholesale Orders</li>
+          <li>✔️ Freshness & Quality Guarantee</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2>Pricing</h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr));">
+          <div class="card"><div class="body"><strong>Basic</strong><p class="lead">Free Delivery ₹500+</p></div></div>
+          <div class="card"><div class="body"><strong>Premium</strong><p class="lead">Free Delivery ₹1000+</p></div></div>
+          <div class="card"><div class="body"><strong>VIP</strong><p class="lead">Membership Discounts</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="grid gallery">
+          <div class="card"><div class="cover"><img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?q=80&w=1200&auto=format&fit=crop" alt="gallery 1"/></div></div>
+          <div class="card"><div class="cover"><img src="https://images.unsplash.com/photo-1556742031-c6961e8560b0?q=80&w=1200&auto=format&fit=crop" alt="gallery 2"/></div></div>
+          <div class="card"><div class="cover"><img src="https://images.unsplash.com/photo-1578916170676-854e527abf2d?q=80&w=1200&auto=format&fit=crop" alt="gallery 3"/></div></div>
+          <div class="card"><div class="cover"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop" alt="gallery 4"/></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="lead">Deepankar — <a href="tel:+917876938008">+91 78769 38008</a> • <a href="https://wa.me/917876938008" target="_blank" rel="noreferrer">WhatsApp</a></p>
+        <small class="note">We respect your privacy.</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container row">
+      <span>© <span id="year"></span> Quality Megamart. All rights reserved.</span>
+      <span><a href="#">Privacy</a> • <a href="#">Terms</a></span>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside id="cart" class="cart-panel" aria-label="Cart">
+    <div class="cart-head">
+      <strong>Cart</strong>
+      <button id="close-cart" class="btn icon" title="Close">✕</button>
+    </div>
+    <div id="cart-lines" class="cart-body"></div>
+    <div class="subtotal">
+      <div class="row">
+        <strong>Subtotal</strong>
+        <strong id="subtotal">₹0</strong>
+      </div>
+      <button id="checkout" class="btn primary" style="width:100%; margin-top:12px;">Checkout on WhatsApp →</button>
+    </div>
+  </aside>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
